@@ -3,8 +3,15 @@ name: Booklog Export
 on:
   workflow_dispatch:
 
+  issues:
+    types: [opened]
+
 jobs:
   export:
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event.issue.title == 'Booklog refresh'
+
     runs-on: ubuntu-latest
 
     steps:
