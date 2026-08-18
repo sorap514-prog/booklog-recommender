@@ -3,6 +3,9 @@ name: Booklog Export
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: "0 12 * * 0"
+
   issues:
     types: [opened]
 
