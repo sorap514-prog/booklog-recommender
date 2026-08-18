@@ -11,10 +11,10 @@ on:
 
 jobs:
   export:
-if: >
-  github.event_name == 'workflow_dispatch' ||
-  github.event_name == 'schedule' ||
-  github.event.issue.title == 'Booklog refresh'
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
+      github.event.issue.title == 'Booklog refresh'
 
     runs-on: ubuntu-latest
 
